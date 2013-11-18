@@ -1,0 +1,106 @@
+
+<div class="row-fluid">
+    <div  class="span9">
+        <div class="panel">
+            <h2>Lashes</h2>
+            <div>
+                <div ng-controller="largeCarouselCtrl" class="visible-desktop">
+
+                    <carousel interval="myInterval">
+                        <slide ng-repeat=" slide in slides" active="slide.active">
+
+
+                                <img ng-src="img/slider/{{slide.id}}.png"  class="shadow">
+
+
+                                <div class="carousel-caption ">
+                                    <div class="row-fluid">
+                                        <div class="pull-right span6">
+                                            <div class="callout">
+                                                <div class="content">
+                                                    <h3>{{slide.title}}</h3>
+                                                    <p>{{slide.text}} <a href="#"><br/>Find out more..</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                        </slide>
+                    </carousel>
+
+                </div>
+                <div ng-controller="largeCarouselCtrl" class="visible-tablet visible-phone" style="background-color: black">
+
+                    <carousel interval="myInterval">
+                        <slide ng-repeat=" slide in slides" active="slide.active">
+
+
+                            <img ng-src="img/slider/{{slide.id}}.png"  class="shadow">
+
+
+                            <div class="carousel-caption">
+                                        <h3>{{slide.title}}</h3>
+                                        <p>{{slide.text}} <a href="#"><br/>Find out more..</a></p>
+                            </div>
+
+                        </slide>
+                    </carousel>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div  id="news" class="span3  hidden-phone">
+        <div class="panel">
+            <h2>What's New</h2>
+            <p>Promotions...
+            </p>
+            <p>
+                Hear our testimonials
+            </p>
+
+        </div>
+    </div>
+</div>
+<div id="offerings">
+    <div class="row-fluid">
+        <div  class="span12">
+
+            <div id="nails" class="span3">
+               <div  class="panel">
+                        <h2>Nail Services</h2>
+                        <img id="nail-service" class="imageOval" alt="Nail being polished red" src="img/nail-polish.png"><br/>
+                        Nail decorations and ... <br/>
+                        <a href="#">Find out more...</a>
+                </div>
+
+
+            </div>
+            <div  id="waxing" class="span3">
+                <div class="panel">
+                    <h2>Waxing</h2>
+                    We provide .... <br/>
+                    <a href="#">Find out more...</a>
+
+
+                </div>
+
+            </div>
+            <div class="span6" id="booking">
+                <div class="panel" ng-controller="calendarCtrl">
+                    <h2>Bookings</h2>
+                    <p>Click on an hour slot to request a Booking. We'll get back to you with a confirmation
+                    within 24 hours.</p>
+                    <div class="calendar" ng-model="eventSources" calendar="myCalendar" config="uiConfig.calendar" ui-calendar="uiConfig.calendar"></div>
+
+
+                </div>
+             </div>
+        </div>
+    </div>
+</div>
+
+
